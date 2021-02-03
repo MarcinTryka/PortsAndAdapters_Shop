@@ -14,7 +14,6 @@ class Money
     private string $decimal;
 
     /**
-     * Money constructor.
      * @param string $amount Money representation in format x.yy
      * @throws InvalidMoneyFormatException
      */
