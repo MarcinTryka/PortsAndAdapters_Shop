@@ -10,8 +10,8 @@ class Money
 {
     const DECIMAL_SEPARATOR = '.';
 
-    private string $value;
-    private string $decimal;
+    private int $value;
+    private int $decimal;
 
     /**
      * @param string $amount Money representation in format x.yy
@@ -34,6 +34,16 @@ class Money
     public function __toString(): string
     {
         return $this->value . self::DECIMAL_SEPARATOR . $this->decimal;
+    }
+
+    public function getValue(): int
+    {
+        return $this->value;
+    }
+
+    public function getDecimal(): int
+    {
+        return $this->decimal;
     }
 
 }
